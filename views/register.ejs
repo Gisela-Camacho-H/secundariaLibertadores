@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ('./partials/head.ejs') %>
+<body>
+    <%- include ('./partials/header.ejs') %>
+    <img width=100% height="200px" src="https://i.pinimg.com/originals/cf/a3/72/cfa3728cedde0decc1a9df988eaa4851.jpg">
+    <main>
+
+        <form action="/" method="POST">
+            <div>
+                <input type="text" name="nombre" placeholder="nombre y apellido">
+            </div>
+            <br>
+            <div>
+                <input type="text" name="nUsuario" placeholder="Nombre de usuario">
+            </div>
+            <br>
+            <div>
+                <input type="text" name="email" placeholder="E-mail">
+            </div>
+            <br>
+            <div>
+                <label>Fecha de nacimiento:</label><br>
+                <input type="date" name="date">
+            </div>
+            <br>
+            <div>
+                <input type="text" name="domicilio" placeholder="Domicilio">
+            </div>
+            <br>
+            <div>
+                <label>Tipo de Usuario:</label>
+                <br>
+                <label for="vendedor">Vendedor</label>
+                <input type="radio" value="vendedor" name="tipoUsuario" id="vendedor">
+                <label for="comprador">Comprador</label>
+                <input type="radio" value="comprador" name="tipoUsuario" id="comprador">
+            </div>
+            <br>
+            <div>
+            <br>
+                <label>Foto de ususario</label>
+                <input accept=".jpg" type="file" name="fotoUsuario" placeholder="Selecciona foto">
+            </div>
+            <br>
+            <div>
+                <input type="password" name="password" placeholder="Escribe contraseña">
+            </div>
+            <br>
+            <div>
+                <input type="password" name="rpassword" placeholder="Valida contraseña">
+            </div>
+            <br>
+            <div>
+                <button class="register" type="reset">Borrar</button>
+                <button class="register" type="submit">Enviar</button>
+            </div>
+            <br>
+        </form>
+    </main>
+    <br>
+    <br>
+    <%- include ('./partials/footer.ejs') %>
+</body>
+</html>

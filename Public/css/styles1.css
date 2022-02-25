@@ -1,0 +1,264 @@
+* {
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+body{
+    background-color:  #F0E2A3;
+}
+header{
+    background-color:  #664E4C;
+}
+div.header{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header div.header p{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+main{
+    margin: auto;
+    width: 90%;
+}
+p{
+    font-size: 12px;
+}
+h3{
+    font-size: 24px;
+}
+li a{
+    text-decoration: none;
+    color: white;
+    font-size: 3.5vh;
+    margin-left: 3.5vh;
+}
+ul{
+    list-style: none;
+}
+footer p, header p, footer h3, footer{
+    text-align: center;
+}
+footer{
+    background-color:#C1D37F;
+}
+article{
+    margin-bottom: 10px;
+}
+main section article{
+    background-color: #664E4C;
+    color: white;   
+    margin: 10px 0px;
+    transition: box-shadow ease-in 0.5s;
+}
+main section article img{
+    width: 100%;
+}
+.logo{
+    width: 200px;
+}
+header .form{
+    display: flex;
+    align-items: center;
+    font-size: 9px;
+}
+main section article i{
+    color: #39b54a;
+}
+.head3{
+    text-align: center;
+    color:  #664E4C;
+}
+main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+main section article:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+article div.info{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 15px;
+}
+#navbar, .descripciones{
+    display: none;
+}
+.burger-menu{
+    text-align: center;
+}
+.fa-bars{
+    background-color: #39b54a;
+    color: white;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.fa-credit-card:hover, .fa-gift:hover, .fa-shield-alt:hover{
+    color:#39b54a;
+
+}
+.copy{
+    text-align: center;
+}
+.precio{
+    font-size: 18px;
+    width: 30%;
+}
+.caracteristicas, .descripciones{
+    font-size: 16px;
+}
+.caracteristicas{
+    color:#39b54a;
+    width: 70%;
+}
+.fa-truck{
+    color: #39b54a;
+    transition: translateX ease 5s;
+}
+.fa-truck:hover{
+    transform: translateX(10px);
+}
+
+.info{
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+}
+
+.login{
+    background-color:  #2e6e36;
+    color: white;
+    width:90%;
+    height: 40px;
+    transition: background-color ease-in 0.5s;
+}
+.login:hover{
+    background-color: #39b54a;
+}
+.register{
+    background-color: #2e6e36;
+    color: white;
+    width: 10%;
+    height: 30px;
+}
+.register:hover{
+    background-color:#39b54a;
+}
+.input{
+    width:90%;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+}
+form{
+    margin-top: 40px;
+    font-size: 20px;
+}
+.log{
+    margin-left: 50px;
+    width: 14vh;
+    height: 40px;
+    background-color: rgb(226, 238, 117);
+    font-size: 20px;
+
+}
+table {
+    display:table;
+    border-color:green;
+}
+
+.table_design{
+    width:100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+@media (min-width: 400px){
+    main section div.products article{
+        width: 50%;
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+    }
+    .descripciones{
+        display: block;
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+    .descripciones:hover{
+        opacity: 1;
+    }
+    #navbar{
+        display:flex;
+        justify-content: space-between;
+        margin: auto;
+    }
+    #navbar ul{
+        display: flex;
+    }
+    li{
+        margin: 0 5px;
+    }
+    .burger-menu{
+        display: none;
+    }
+    main section article .descripciones{
+        display: block;
+    }
+    main section div.products{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .precio,
+    .caracteristicas{
+        width: 50%;
+    }
+}
+@media (min-width: 769px){
+    main section div.products article{
+        width: 22%;
+    }
+    div.header p {
+        flex-grow: 0.7;
+    }
+    div.header  {
+        flex-wrap: nowrap;
+        margin:auto;
+    }
+    .copy{
+        max-width: 500px;
+        text-align: right;
+    }
+    #footer{
+        display:flex;
+        justify-content: space-around;
+        margin: 10px;
+    }
+    .logo{
+        width: 300px;
+    } 
+}
+@media (min-width: 1200px){
+    .header, #navbar{
+        margin: auto;
+    }
+}

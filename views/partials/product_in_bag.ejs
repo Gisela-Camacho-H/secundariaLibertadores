@@ -1,0 +1,57 @@
+<!-- views/partials/product_in_bag.ejs-->
+<tr class=row>
+    <script>
+        function increase() {
+            var a = 1;
+            var textBox = document.getElementById("qty");
+            textBox.value++;
+        }    
+        
+        function decrease() {
+            var textBox = document.getElementById("qty");
+            textBox.value--;
+        }
+        function total(){
+            
+            document.getElementById("Total").innerHTML=("<%=Price%>"*document.getElementById("qty").value);
+            
+        }
+        function init_qty(){
+            document.getElementById("qty").value="<%=Quantity%>"
+        }
+        window.onload = function() {
+            init_qty();
+            total();
+        }
+    </script>
+    <td>
+        <div class="image_product">
+            <a>
+                <img href class="image_product__img" src="<%= ProductImg %>" alt>
+            </a>
+        </div>
+    </td>
+    <td>
+        <div class="product_description">
+            <a href class="product name"> <%= ProductName%>
+            </a>
+        </div>
+    </td>
+    <td class="price" data-title="Price">
+        <%=Price%>
+    </td>
+    <td>
+        
+        <div class="sp-quantity">
+            <div class="container" style=" font-size:14px; ">
+                <button type="button" onclick="decrease(),total()">-</button>
+                <input type="text" id="qty" value="0">
+                <button type="button" onclick="increase(),total()">+</button>
+            </div>
+        </div>
+    </td>
+        <td class="total" data-title="Total_tit" >
+            <label id="Total"></label>           
+        </td>
+    </tr>
+</tr>

@@ -1,0 +1,24 @@
+{
+  "name": "digital_hub_project",
+  "version": "1.0.0",
+  "description": "## Table of Contents 1. Miguel Hidalgo 3. Gisela Camacho 4. Ana Paula 5. Carla",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cglll/Digital_Hub_Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cglll/Digital_Hub_Project/issues"
+  },
+  "homepage": "https://github.com/cglll/Digital_Hub_Project#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
