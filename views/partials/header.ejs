@@ -1,23 +1,28 @@
 <!-- views/partials/header.ejs-->
-<header>
-    <div class="header">
+<header id="header" class="header-secundaria">
+    <nav class="navbar">
+      <div class="container">
         <div class="logo">
-            <img width=55%; src="/img/logo.png">
-        </div>
-        <div class="form">
-    </div>
-    <nav id="navbar">
+            <a href="/"><img class="logo" width="40 px" height="40 px" src="/img/logo.png"></a>      
+        </div>  
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="">Nosotros</a></li>
-            <li><a href="">Soy productor</a></li>
-            <li><a href="">Quiero comprar</a></li>
-            <li><a href="">Contacto</a></li>
-            <li><a href="register">Registrarme</a></li>
-            <li><a href="login"><button class="log">Log in</button></a></li>
+          <li><a href="#" class="active">Nosotros</a></li>
+          <li><a href="#">Admisión</a></li>
+          <li><a href="#">Plan de Estudio</a></li>
+          <li><a href="#">Calendario Escolar</a></li>
+          <li><a href="#">Galeria</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Otros</a></li>
         </ul>
+        <ul>
+            <li><a href="#">Login</a></li>
+          </ul>
+      </div>
     </nav>
-    <div class="burger-menu">
-        <i class="fas fa-bars"></i>
-    </div><br>
-</header>
+    <div class="header_background">
+      <img src="../img/header_background0.JPG"  alt="header_background">
+    </div>
+    <div id="slogan" class="slogan">
+      <h1>"Educando para la vida, con equidad y calidad"</h1>
+    </div>     
+  </header>
