@@ -154,9 +154,17 @@ Footer
 */
 footer{
   background-color: #0E333C;
-  display: flex;
-  justify-content: space-between;
 }
 footer p{
   color: #fff; 
+  margin-left: 30px;
+  font-size: 1.5vw;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+}
+#footer{
+  display: flex;
+  justify-content: space-between;
+}
+#map{
+  margin-bottom: 20px;
 }
