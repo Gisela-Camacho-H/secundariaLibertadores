@@ -154,4 +154,9 @@ Footer
 */
 footer{
   background-color: #0E333C;
+  display: flex;
+  justify-content: space-between;
+}
+footer p{
+  color: #fff; 
 }
