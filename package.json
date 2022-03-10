@@ -4,7 +4,7 @@
   "description": "## Table of Contents 1. Miguel Hidalgo 3. Gisela Camacho 4. Ana Paula 5. Carla",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nodemon app.js"
   },
   "repository": {
     "type": "git",
