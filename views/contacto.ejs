@@ -5,9 +5,25 @@
     <%- include ('./partials/header.ejs') %>
     <main>
         <br><br><br><br><br><br>
-        <h1>Contacto</h1>
+        <form action="/" method="POST">
+            <div class="formCreate1">
+                <label class="label" ><b>Nombre</b></label><br>
+                <input class="input" type="text" name="UsuarioNombre" required><br>
+
+                <label class="label" ><b>Correo</b></label><br>
+                <input class="input" type="text" name="UsuarioEmail" required><br>
+
+                <label class="label" ><b>Teléfono</b></label><br>
+                <input class="input" type="text" name="UsuarioConfirma" required><br>
+
+                <label class="label" ><b>Consulta</b></label><br>
+                <textarea class="input" name="consulta" cols="30" rows="4" required></textarea><br>
+
+                <button class="login" type="submit">Enviar</button><br><br>
+                <br>
+            </div>
+        </form>
     </main>
-    <br><br><br><br><br><br>
     <%- include ('./partials/footer.ejs') %>
 </body>
 </html>

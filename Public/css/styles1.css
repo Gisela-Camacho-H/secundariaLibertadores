@@ -167,3 +167,46 @@ footer p{
 #map{
   margin-bottom: 20px;
 }
+
+/*
+login
+*/
+form{
+  font-family: 'Solway', 'Arial', sans-serif;
+  margin-bottom: 350px;
+  margin-top: 50px;
+}
+.formCreate1{
+  background-color: rgba(251, 253, 255, 0.4);
+  width: 30%;
+  margin: auto;
+  height: 250px
+}
+.input{
+  margin: 10px 0px 30px auto;
+  width: 90%;
+  padding: 10px;
+  background-color: #29638A;
+  color: white;
+}
+.label{
+  font-size: 20px;
+  text-align: center;
+}
+.login{
+  font-size: 20px;
+  padding: 5px;
+  background-color: #FFDF59;
+  border-radius: 10px;
+  border: 3px  #29638A solid;
+  margin: 5px 0px 5px 40px;
+  width: 70%;
+  font-family: 'Solway', 'Arial', sans-serif;
+}
+.crearCuenta{
+  text-decoration: none;
+  color: #29638A;
+  margin-left: 120px;
+  width: 100%;
+  font-family: 'Solway', 'Arial', sans-serif;
+}

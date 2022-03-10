@@ -6,22 +6,26 @@
     <main>
         <br><br><br><br><br><br>
         <form action="/" method="POST">
-            <div>
-                <input class="input" type="text" name="nUsuario" placeholder="   Nombre de usuario">
+            <div class="formCreate1">
+                <div>
+                    <label class="label" ><b>Correo</b></label><br>
+                    <input class="input" type="text" name="UsuarioEmail" required>
+                </div>
+                <br>
+                <div>
+                    <label class="label" ><b>Contraseña</b></label><br>
+                    <input class="input" type="password" name="password" required>
+                </div>
+                <br>
+                <div>
+                    <button class="login" type="submit">login</button>
+                </div>
+                <br>
+                <a class="crearCuenta" href="register">Crear Cuenta</a>
+                <br>
             </div>
-            <br>
-            <div>
-                <input class="input" type="password" name="password" placeholder="   Elegí tu contraseña">
-            </div>
-            <br>
-            <div>
-                <button class="login" type="submit">Enviar</button>
-            </div>
-            <br>
-            <br>
         </form>
     </main>
-    <br><br><br><br><br><br>
     <%- include ('./partials/footer.ejs') %>  
 </body>
 </html>

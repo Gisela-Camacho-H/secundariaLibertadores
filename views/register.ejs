@@ -6,58 +6,29 @@
     <main>
         <br><br><br><br><br><br>
         <form action="/" method="POST">
-            <div>
-                <input type="text" name="nombre" placeholder="nombre y apellido">
-            </div>
-            <br>
-            <div>
-                <input type="text" name="nUsuario" placeholder="Nombre de usuario">
-            </div>
-            <br>
-            <div>
-                <input type="text" name="email" placeholder="E-mail">
-            </div>
-            <br>
-            <div>
-                <label>Fecha de nacimiento:</label><br>
-                <input type="date" name="date">
-            </div>
-            <br>
-            <div>
-                <input type="text" name="domicilio" placeholder="Domicilio">
-            </div>
-            <br>
-            <div>
-                <label>Tipo de Usuario:</label>
+            <div class="formCreate1">
+                <label class="label" ><b>Nombre</b></label><br>
+                <input class="input" type="text" name="UsuarioNombre" required><br>
+
+                <label class="label" ><b>Apellidos</b></label><br>
+                <input class="input" type="text" name="UsuarioApellidos" required><br>
+
+                <label class="label" ><b>Correo</b></label><br>
+                <input class="input" type="text" name="UsuarioEmail" required><br>
+
+                <label class="label" ><b>Confirmar correo</b></label><br>
+                <input class="input" type="text" name="UsuarioConfirma" required><br>
+
+                <label class="label" ><b>Contraseña</b></label><br>
+                <input class="input" type="password" name="password" required><br>
+
+                <button class="login" type="submit">Crear cuenta</button><br><br>
+
+                <a class="crearCuenta" href="login">Ya tengo cuenta</a>
                 <br>
-                <label for="vendedor">Vendedor</label>
-                <input type="radio" value="vendedor" name="tipoUsuario" id="vendedor">
-                <label for="comprador">Comprador</label>
-                <input type="radio" value="comprador" name="tipoUsuario" id="comprador">
             </div>
-            <br>
-            <div>
-            <br>
-                <label>Foto de ususario</label>
-                <input accept=".jpg" type="file" name="fotoUsuario" placeholder="Selecciona foto">
-            </div>
-            <br>
-            <div>
-                <input type="password" name="password" placeholder="Escribe contraseña">
-            </div>
-            <br>
-            <div>
-                <input type="password" name="rpassword" placeholder="Valida contraseña">
-            </div>
-            <br>
-            <div>
-                <button class="register" type="reset">Borrar</button>
-                <button class="register" type="submit">Enviar</button>
-            </div>
-            <br>
-        </form>
+        </form><br><br>
     </main>
-    <br><br><br><br><br><br>
     <%- include ('./partials/footer.ejs') %>
 </body>
 </html>
