@@ -1,24 +1,33 @@
 {
-  "name": "digital_hub_project",
+  "name": "ProyectoIntegrador",
   "version": "1.0.0",
-  "description": "## Table of Contents 1. Miguel Hidalgo 3. Gisela Camacho 4. Ana Paula 5. Carla",
-  "main": "index.js",
+  "description": "Dar publicidad a la secundaria Libertadores de América a través de una página web donde puedan compartir información de oferta educativa y de contacto.",
+  "main": "app.js",
   "scripts": {
     "test": "nodemon app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cglll/Digital_Hub_Project.git"
+    "url": "git+https://github.com/Gisela-Camacho-H/secundariaLibertadores.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cglll/Digital_Hub_Project/issues"
+    "url": "https://github.com/Gisela-Camacho-H/secundariaLibertadores/issues"
   },
-  "homepage": "https://github.com/cglll/Digital_Hub_Project#readme",
+  "homepage": "https://github.com/Gisela-Camacho-H/secundariaLibertadores#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
     "ejs": "^3.1.6",
-    "express": "^4.17.1"
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "express-validation": "^3.0.8",
+    "method-override": "^3.0.0",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
+    "sequelize": "^6.17.0",
+    "sequelize-cli": "^6.4.1"
   }
 }

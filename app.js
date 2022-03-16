@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
-const mainRouters = require('./routers/mainRouter');
+const mainRouters = require('./src/routers/mainRouter');
+
 
 const app = express();
 
@@ -13,6 +14,6 @@ app.use(express.static(publicPath));
 app.use('/', mainRouters);
 
 app.set('view engine','ejs');
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, './src/views'));
 
 app.listen(process.env.PORT || port, () => console.log(`Servidor corriendo en puerto ${port}`));
