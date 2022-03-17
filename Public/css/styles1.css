@@ -5,6 +5,7 @@
 
 /* slider anuncios*/
 @import "sliderAnuncios.css";
+@import "formAnuncios.css";
 
 *, *::after, *::before {
   margin: 0;

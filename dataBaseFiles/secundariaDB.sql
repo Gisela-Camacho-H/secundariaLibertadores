@@ -158,43 +158,13 @@ CREATE TABLE IF NOT EXISTS `Secundaria_db`.`Anuncios` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `titulo` VARCHAR(45) NOT NULL,
   `descripcion` VARCHAR(450) NOT NULL,
+  `archivo` VARCHAR(100) NOT NULL,
   `Administradores_id` INT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_Anuncios_Administradores1_idx` (`Administradores_id` ASC) VISIBLE,
   CONSTRAINT `fk_Anuncios_Administradores1`
     FOREIGN KEY (`Administradores_id`)
     REFERENCES `Secundaria_db`.`Administradores` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `Secundaria_db`.`Archivos`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Secundaria_db`.`Archivos` (
-  `id` INT NOT NULL,
-  `nombre` VARCHAR(100) NOT NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `Secundaria_db`.`AnuncioArchivo`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Secundaria_db`.`AnuncioArchivo` (
-  `Anuncios_id` INT NOT NULL,
-  `Archivos_id` INT NOT NULL,
-  INDEX `fk_AnuncioArchivo_Anuncios1_idx` (`Anuncios_id` ASC) VISIBLE,
-  INDEX `fk_AnuncioArchivo_Archivos1_idx` (`Archivos_id` ASC) VISIBLE,
-  CONSTRAINT `fk_AnuncioArchivo_Anuncios1`
-    FOREIGN KEY (`Anuncios_id`)
-    REFERENCES `Secundaria_db`.`Anuncios` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_AnuncioArchivo_Archivos1`
-    FOREIGN KEY (`Archivos_id`)
-    REFERENCES `Secundaria_db`.`Archivos` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

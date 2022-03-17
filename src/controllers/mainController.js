@@ -1,32 +1,30 @@
-const path = require('path');
-
 const mainController = {
     index: (req, res) => {
         res.render('index')
     },
     nosotros: (req,res) =>{
-        res.render(path.join(__dirname, '../views/nosotros'))
+        res.render('nosotros')
     },
     admision: (req,res) =>{
-        res.render(path.join(__dirname, '../views/admision'))
+        res.render('admision')
     }, 
     plan: (req,res) =>{
-        res.render(path.join(__dirname, '../views/plan'))
+        res.render('plan')
     }, 
     calendario: (req,res) =>{
-        res.render(path.join(__dirname, '../views/calendario'))
+        res.render('calendario')
     }, 
     galeria: (req,res) =>{
-        res.render(path.join(__dirname, '../views/galeria'))
+        res.render('galeria')
     }, 
     contacto: (req,res) =>{
-        res.render(path.join(__dirname, '../views/contacto'))
+        res.render('contacto')
     }, 
     otros: (req,res) =>{
-        res.render(path.join(__dirname, '../views/otros'))
+        res.render('otros')
     }, 
     productos: (req,res) =>{
-        res.render(path.join(__dirname, '../views/productos'))
+        res.render('productos')
     },
     register: (req, res) => {
         res.render('register')
