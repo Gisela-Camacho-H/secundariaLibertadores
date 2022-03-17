@@ -13,6 +13,9 @@ module.exports = function(sequelize, dataTypes){
         descripcion:{
             type: dataTypes.STRING(450), 
         }, 
+        archivo:{
+            type: dataTypes.STRING(100), 
+        }, 
     };
 
     let config = {
@@ -27,14 +30,7 @@ module.exports = function(sequelize, dataTypes){
             as: "por_administrador",
             foreignKey: "Administradores_id"
           });
-        
-        Anuncio.belongsToMany(models.Archivo, {
-            as: "Anuncios",
-            through: "Anuncio_Archivo",
-            foreignKey: "Anuncios_id",
-            otherKey: "Archivos_id",
-            timestamps: false
-          });  
+         
     }
     return Anuncio;
 }

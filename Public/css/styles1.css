@@ -5,6 +5,7 @@
 
 /* slider anuncios*/
 @import "sliderAnuncios.css";
+@import "anunciosForm.css";
 
 *, *::after, *::before {
   margin: 0;
@@ -15,8 +16,8 @@
 body {
 	background-color: #fff;
 	color: #222;
-  font-family: 'Open Sans', 'Arial', sans-serif;
-  font-family: 'Poppinsm', 'Arial';/*'Open Sans', 'Arial', sans-serif;*/
+  /*font-family: 'Open Sans', 'Arial', sans-serif;*/
+  font-family: 'Poppinsm', 'Arial', sans-serif;/*'Open Sans', 'Arial', sans-serif;*/
 }
 
 /*Header */
