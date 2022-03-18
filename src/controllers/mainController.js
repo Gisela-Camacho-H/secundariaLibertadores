@@ -1,6 +1,19 @@
+const db = require("../database/models");
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+
+
+
 const mainController = {
     index: (req, res) => {
-        res.render('index')
+        const reqAnuncios = db.Anuncio.findAll({
+            limit:3});
+
+        Promise.all([reqAnuncios])
+            .then(([anuncios])=>{
+                res.render('index',{anuncios: anuncios});
+            })
+        
     },
     nosotros: (req,res) =>{
         res.render('nosotros')

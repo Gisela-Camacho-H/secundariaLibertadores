@@ -1,96 +1,20 @@
 <section class="container content">
+    <h2>Anuncios recientes</h2>
     <div class="content">
         <div class="slider-anuncios">
             <div class="slider-container">
                 <div class="boxes">
-                    <div class="box">
-                        <img src="./img/anuncios/inscripciones2022.jpg" alt="anuncio">
+                    <% for(const anuncio of anuncios) { %>
+                    <article class="">
+                        <a href="/anuncios/detalle/<%= anuncio.id %>"">
+                            <img src="/img/anuncios/<%= anuncio.archivo %>"" alt="anuncio">
+                        </a>
                         <div class="box">
-                            <h1>Titulo1 </h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit!.</p>
+                            <h1><%= anuncio.titulo %></h1>
+                            <p><%= anuncio.descripcion %></p>
                         </div>
-                    </div>
-                </div>
-                <div class="boxes">
-                    <div class="box">
-                        <img src="./img/anuncios/inscripciones2021.jpg" alt="anuncio">
-                        <div class="box">
-                            <h1>Titulo2 </h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit!.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="boxes">
-                    <div class="box">
-                        <img src="./img/anuncios/inscripciones2022.jpg" alt="anuncio">
-                        <div class="box">
-                            <h1>Titulo3 </h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit!.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="boxes">
-                    <div class="box">
-                        <img src="./img/anuncios/inscripciones2021.jpg" alt="anuncio">
-                        <div class="box">
-                            <h1>Titulo4 </h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit!.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="boxes">
-                    <div class="box">
-                        <img src="./img/anuncios/inscripciones2022.jpg" alt="anuncio">
-                        <div class="box">
-                            <h1>Titulo3 </h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit!.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="boxes">
-                    <div class="box">
-                        <img src="./img/anuncios/inscripciones2021.jpg" alt="anuncio">
-                        <div class="box">
-                            <h1>Titulo4 </h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit!.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="boxes">
-                    <div class="box">
-                        <img src="./img/anuncios/inscripciones2022.jpg" alt="anuncio">
-                        <div class="box">
-                            <h1>Titulo5 </h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit!.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="boxes">
-                    <div class="box">
-                        <img src="./img/anuncios/inscripciones2021.jpg" alt="anuncio">
-                        <div class="box">
-                            <h1>Titulo6 </h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit!.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="boxes">
-                    <div class="box">
-                        <img src="./img/anuncios/inscripciones2022.jpg" alt="anuncio">
-                        <div class="box">
-                            <h1>Titulo7 </h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit!.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="boxes">
-                    <div class="box">
-                        <img src="./img/anuncios/inscripciones2021.jpg" alt="anuncio">
-                        <div class="box">
-                            <h1>Titulo8 </h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit!.</p>
-                        </div>
-                    </div>
+                    </article>
+                    <% } %>
                 </div>
             </div>
             
