@@ -17,12 +17,16 @@ const anunciosController = {
         res.render('index')
     }, 
     crearPost: (req, res) => {
-        const { titulo, descripcion, archivo } =  req.body;
-        console.log(req.body)
+   
+        const { titulo, descripcion } =  req.body;
+        const archivo = req.file.filename;
+        const Administradores_id = 1;
+        
         Anuncios.create({
             titulo, 
             descripcion,
-            archivo 
+            archivo,
+            Administradores_id
         })
             .then(()=> {
                 console.log(descripcion);

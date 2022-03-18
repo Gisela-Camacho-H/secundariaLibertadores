@@ -9,7 +9,7 @@ const anunciosRouter = express.Router();
 
 //anunciosRouter.get('/', anunciosController.index);
 anunciosRouter.get('/crear', anunciosController.crear);
-anunciosRouter.post('/', subirAnuncio.single('archivoAnuncio'), anunciosController.crearPost);
+anunciosRouter.post('/crear', subirAnuncio.single('archivoAnuncio'), anunciosController.crearPost);
 anunciosRouter.get('/listado', anunciosController.listado);
 
 module.exports = anunciosRouter;
