@@ -133,14 +133,14 @@ Colores: Azules, Amarillo, blanco.
 |Name                         |Email                          |Address                          |   
 |:---------------------------:|:-----------------------------:|:-------------------------------:| 
 |Victoria Lizárraga           |victoria.lizcor@gmail.com      | Oaxaca                          |
-|Juan de Jesus Tovar Vázquez  |garfil34@gmail.com             | Queretaro                       |
+|Gisela Camacho Huerta        |gis25cam@gmail.com             | Puebla                          |
 |Jonathan Domínguez           |qfbjdf@gmail.com               | CDMX                            |
 
 ## Roles de Scrum del proyecto
 
 1. Product Owner: Victoria Lizárraga. 
-2. Scrum Master: Juan Tovar.
-3. Developers Team: Jonathan Domínguez, Amber Maglia, Victoria Lizárraga y Juan Tovar.
+2. Scrum Master: Gisela Camacho.
+3. Developers Team: Jonathan Domínguez, Gisela Camacho y Victoria Lizárraga.
 
 
 #### Avances del proyecto

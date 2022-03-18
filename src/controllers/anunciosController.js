@@ -18,7 +18,7 @@ const anunciosController = {
     }, 
     crearPost: (req, res) => {
         const { titulo, descripcion, archivo } =  req.body;
-     
+        console.log(req.body)
         Anuncios.create({
             titulo, 
             descripcion,
@@ -26,16 +26,17 @@ const anunciosController = {
         })
             .then(()=> {
                 console.log(descripcion);
-                return res.redirect('/anuncios');
+                return res.redirect('/');
             })
             .catch((error) => {
-                res.render("error", {error: "Error al crear pelicula"});
+                console.log(error);
+                res.render("error", {error: "Error al crear anuncio"});
             })
     },
     listado: (req, res) => {
         Anuncios.findAll().
             then((anuncios)=> {
-                res.render('listadoAnuncios', {anuncios})
+                res.render('administradores/listadoAnuncios', {anuncios})
             })     
     }
 }

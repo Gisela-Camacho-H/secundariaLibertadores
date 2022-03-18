@@ -1,16 +1,22 @@
 <%- include ('../partials/head.ejs') %>
 <%- include ('../partials/header.ejs') %>
-    <section class="container">
-        <div class="content">
-            <h2> Anuncios</h2>
-            <ul>
-                <% for (let i = 0; i < anuncios.length; i++) {%>
-                    <li>
-                        <%=anuncios[i].titulo %>
-                    </li>
-                <%}%>    
-            </ul>
-        </div>        
-    </section>
+    <main>
+        <section class="container">
+            <div class="content">
+                <h2> Anuncios</h2>
+                <ul>
+                    <% for (let i = 0; i < anuncios.length; i++) {%>
+                        <li>
+                            <%= anuncios[i].titulo %>
+                            <%= anuncios[i].descripcion %>
+                            <%= anuncios[i].archivo %>
+                        </li>
+                    <%}%>    
+                </ul>
+            </div>        
+        </section>
+    </br>
+    </br>
+    </main> 
 
 <%- include ('../partials/footer.ejs') %>
