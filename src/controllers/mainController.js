@@ -7,6 +7,9 @@ const { Op } = require("sequelize");
 const mainController = {
     index: (req, res) => {
         const reqAnuncios = db.Anuncio.findAll({
+            order: [
+                ["id", "DESC"],
+              ],
             limit:3});
 
         Promise.all([reqAnuncios])
