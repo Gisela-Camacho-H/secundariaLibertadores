@@ -22,6 +22,11 @@ app.use('/maestros', maestrosRouter);
 app.use('/tutores', tutoresRouter);
 app.use('/anuncios', anunciosRouter);
 
+// Creacion de rutas API 
+const anunciosApiRouter = require('./src/routes/api/anunciosApiRouter');
+
+app.use('/api/anuncios', anunciosApiRouter);
+
 // Motor de vistas
 app.set('view engine','ejs');
 app.set('views', path.join(__dirname, './src/views'));
