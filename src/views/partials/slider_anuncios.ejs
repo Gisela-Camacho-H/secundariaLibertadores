@@ -6,11 +6,11 @@
                 <div class="boxes">
                     <% for(const anuncio of anuncios) { %>
                     <article class="">
-                        <a href="/anuncios/<%= anuncio.id %>"">
-                            <img src="/img/anuncios/<%= anuncio.archivo %>"" alt="anuncio">
-                        </a>
                         <div class="box">
                             <h1><%= anuncio.titulo %></h1>
+                            <a href="/anuncios/<%= anuncio.id %>"">
+                                <img src="/img/anuncios/<%= anuncio.archivo %>"" alt="anuncio">
+                            </a>
                             <p><%= anuncio.descripcion %></p>
                         </div>
                     </article>
