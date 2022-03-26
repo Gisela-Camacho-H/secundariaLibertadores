@@ -34,8 +34,8 @@ module.exports = function(sequelize, dataTypes){
 
     Administrador.associate = function (models){
         Administrador.hasMany(models.Anuncio, {
-            as: "anuncios_hechos",
-            foreignKey: "Administradores_id"
+            as: "anuncio_adminId",
+            foreignKey: "Administradores_id",
           });
     }
 

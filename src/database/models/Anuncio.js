@@ -27,8 +27,8 @@ module.exports = function(sequelize, dataTypes){
 
     Anuncio.associate = function(models){
         Anuncio.belongsTo(models.Administrador, {
-            as: "por_administrador",
-            foreignKey: "Administradores_id"
+            as: "anuncio_adminId",
+            foreignKey: "Administradores_id",
           });
         
     }

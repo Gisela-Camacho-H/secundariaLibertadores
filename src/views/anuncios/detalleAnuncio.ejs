@@ -1,0 +1,31 @@
+<%- include('../partials/head.ejs') %>
+
+<body>
+  <%- include ('../partials/header.ejs') %>
+  <main>
+    <section class="container">
+        <div class="content >
+            <div class="">
+                <h1><%= anuncio.titulo %></h1>
+                <a href="/anuncios/<%= anuncio.id %>"">
+                    <img src="/img/anuncios/<%= anuncio.archivo %>"" alt="anuncio">
+                </a>
+                <p><%= anuncio.descripcion %></p>
+            </div>       
+            <br>
+            <div>
+                <div class="button">
+                    <a href="/anuncios/editar/<%=anuncio.id%>">
+                        <button type="button" name="button" class="login">Editar</button>
+                    </a>
+                    <a href="/anuncios/borrar/<%=anuncio.id%>">
+                        <button type="button" name="button" class="login">Borrar</button>
+                    </a>
+                </div>
+            </div>
+        </div>        
+    </section>
+</main>
+<br>
+<br>
+<%- include ('../partials/footer.ejs') %>

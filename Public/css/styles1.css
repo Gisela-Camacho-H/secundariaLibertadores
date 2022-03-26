@@ -18,6 +18,7 @@ body {
 	color: #222;
   font-family: 'Open Sans', 'Arial', sans-serif;
   font-family: 'Poppinsm', 'Arial';/*'Open Sans', 'Arial', sans-serif;*/
+  margin-bottom: 4em;
 }
 
 /*Header */
@@ -150,35 +151,37 @@ body {
 /*end header*/
 
 .container {
-    margin: 0 auto;
-    max-width: 1200px;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
-.content h1 {
-  font-size: 100%;
-  /*margin: 40px 0;*/
-  padding-right: 4rem;
-  padding-left: 4rem;
-}
 
-.content h2, .content h3 {
-  font-size: 150%;
-  margin: 10px 0;
-  padding-right: 4rem;
-  padding-left: 4rem;
-}
+.container .content h1, .content h2 {
+  color: #0E333C;
+  padding: 2rem 0;
+} 
 
-.content p {
+.container .content p {
   color: #555;
   line-height: 30px;
   letter-spacing: 1.5px;
-  /*margin: auto;*/
+  text-align:justify;
+  margin: auto;
 }
+
+.container .content img{
+  margin: auto;
+  display: block;
+  width: 40%;
+}
+
+
 
 /*
 Footer 
 */
 footer{
+  margin-top: 4em;
   background-color: #0E333C;
 }
 footer p{
@@ -207,7 +210,7 @@ form{
   background-color: rgba(251, 253, 255, 0.4);
   width: 30%;
   margin: auto;
-  height: 250px
+  height: 250px;
 }
 .input{
   margin: 10px 0px 30px auto;
@@ -239,13 +242,12 @@ form{
 }
 
 /* responsive*/
-@media screen and (min-width: 601px) {
+/* @media screen and (min-width: 601px) {
 
   .content h1,
   .content h2, .content h3, .content h4, .content p{
     margin: auto;
     font-size: 100%;
-    /*margin: 40px 0;*/
     padding-right: 4rem;
     padding-left: 4rem;
   }
@@ -266,7 +268,6 @@ form{
   .content h2, .content h3, .content h4, .content p{
     margin: auto;
     font-size: 100%;
-    /*margin: 40px 0;*/
     padding-right: 4rem;
     padding-left: 4rem;
   }
@@ -279,4 +280,4 @@ form{
     font-size: 10px;
   }
 
-}
+} */

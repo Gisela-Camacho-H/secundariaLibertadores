@@ -1,17 +1,18 @@
 
-.content .slider-anuncios{
-    margin: 0 auto;
+.slider-anuncios{
+    margin: 1em 1em;
     padding: 0px 50px;
-    padding-top: 10ex;
     display: flex;
     align-items: center;
 }
-.content .slider-anuncios img{
-    width: 40%;
+.slider-anuncios img{
+    display: block;
+    width: 50%;
+    margin: auto;
 }
 
 .slider-anuncios h1{
-    margin: 0.5rem 0;
+    margin: 1rem 0;
 }
 
 
@@ -19,6 +20,7 @@
     display: grid;
     grid-template-columns: repeat(6, 300px);
     grid-gap: 50px;
+    position: relative;
 }
 
 .box {
