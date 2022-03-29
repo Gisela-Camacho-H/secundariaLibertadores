@@ -5,7 +5,7 @@ const { Op } = require("sequelize");
 const { render } = require('express/lib/response');
 
 const Anuncios = db.Anuncio;
-const Administradores = db.Administradores;
+const Administradores = db.Administrador;
 const anunciosController = {
  
     crear: (req, res) => {
@@ -46,9 +46,9 @@ const anunciosController = {
         let anuncioId = parseInt(req.params.id);
         
         Anuncios.findByPk(anuncioId, {
-            // include: [
-            //   { association: "anuncio_adminId"},
-            // ]
+             //include: [
+             //  { association: "anuncio_adminId"},
+             //]
         })
             .then(anuncio => {
                 return res.render('anuncios/detalleAnuncio', {anuncio});
@@ -56,21 +56,22 @@ const anunciosController = {
             .catch(err => {
                 console.log('%c///////////error/////////////', 'color: red');
                 console.log(err)
-
             });
     },
-    /*
-    editar: function(req,res) {
+    editar:  (req,res) => {
         let anuncioId = req.params.id;
+        let admin = Administradores.findAll()
         let anuncio = Anuncios.findByPk(anuncioId,{include: ['anuncio_adminId']});
-        let promGenres = Genres.findAll();
         
-        Promise
-        .all([promMovies, promGenres, promActors])
-        .then(([Movie, allGenres, allActors]) => {
-            Movie.release_date = moment(Movie.release_date).format('L');
-            return res.render(path.resolve(__dirname, '..', 'views',  'moviesEdit'), {Movie,allGenres,allActors})})
-        .catch(error => res.send(error))
+        console.log(admin)
+        Promise.all([anuncio, admin])
+            .then(([Anuncio, Admin]) => {
+                return res.render('anuncios/editarAnuncio', {Anuncio,Admin})})
+            .catch(error => {
+                console.log('%c///////////error/////////////', 'color: red');
+                console.log(error)
+                res.send(error)
+            })
     },
     /*
     update: function (req,res) {
