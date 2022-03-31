@@ -14,8 +14,12 @@ const mainController = {
 
         Promise.all([reqAnuncios])
             .then(([anuncios])=>{
-                res.render('index',{anuncios: anuncios});
+                res.render('index',{anuncios});
             })
+            .catch(error => {
+                console.log('\x1b[31m%s\x1b[0m', '///////////error/////////////')
+                console.log(error)
+            });
         
     },
     nosotros: (req,res) =>{

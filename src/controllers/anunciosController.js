@@ -3,6 +3,7 @@ const path = require('path');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 const { render } = require('express/lib/response');
+const console = require('console');
 
 const Anuncios = db.Anuncio;
 const Administradores = db.Administrador;
@@ -55,44 +56,68 @@ const anunciosController = {
             })
             .catch(err => {
                 console.log('%c///////////error/////////////', 'color: red');
+                console.log('\x1b[31m%s\x1b[0m', '///////////error/////////////')
                 console.log(err)
             });
     },
-    editar:  (req,res) => {
-        let anuncioId = req.params.id;
-        let admin = Administradores.findAll()
-        let anuncio = Anuncios.findByPk(anuncioId,{include: ['anuncio_adminId']});
-        
-        console.log(admin)
-        Promise.all([anuncio, admin])
-            .then(([Anuncio, Admin]) => {
-                return res.render('anuncios/editarAnuncio', {Anuncio,Admin})})
+    editar: async (req,res) => {
+        let anuncioId = parseInt(req.params.id);
+        let promesaAdmin = await Administradores.findAll()
+        let promesAnuncio = await Anuncios.findByPk(anuncioId,{include: ['anuncio_adminId']});
+       
+        //console.log(promesaAdmin);
+
+        await Promise.all([promesAnuncio, promesaAdmin])
+            .then(([anuncio, admin]) => {
+                return res.render('anuncios/editarAnuncio', {anuncio, admin})})
             .catch(error => {
-                console.log('%c///////////error/////////////', 'color: red');
+                console.log('\x1b[31m%s\x1b[0m', '///////////error/////////////')
+                console.log('\x1b[33m%s\x1b[0m', '///////////')
+                //console.log('%c///////////error/////////////', 'color: red');
                 console.log(error)
                 res.send(error)
             })
     },
-    /*
-    update: function (req,res) {
-        let movieId = req.params.id;
-        Movies
-        .update(
+    
+    actualizar:  async(req,res) => {
+        let anuncioId = req.params.id;  
+        let promesAnuncio = await Anuncios.findByPk(anuncioId,{include: ['anuncio_adminId']}, {raw:true});
+
+        const { titulo, descripcion } =  req.body;
+        const Administradores_id = 1;
+        
+        const variablesDB = {
+            titulo, 
+            descripcion,
+            Administradores_id,
+        };
+        
+                
+        if (req.file) {
+            console.log('\x1b[31m%s\x1b[0m', '/////error//////');
+            const archivo = req.file.filename;
+            variablesDB.archivo = archivo;
+            //console.log(archivo)
+        }
+        console.log(variablesDB);
+        
+        Anuncios.update(
+            variablesDB,
             {
-                title: req.body.title,
-                rating: req.body.rating,
-                awards: req.body.awards,
-                release_date: req.body.release_date,
-                length: req.body.length,
-                genre_id: req.body.genre_id
-            },
-            {
-                where: {id: movieId}
+                where: {id: anuncioId}
             })
         .then(()=> {
-            return res.redirect('/movies')})            
-        .catch(error => res.send(error))
+            return res.redirect('/')})            
+            .catch(error => {
+                console.log('\x1b[31m%s\x1b[0m', '///////////error/////////////')
+                console.log('\x1b[33m%s\x1b[0m', '///////////')
+                //console.log('%c///////////error/////////////', 'color: red');
+                console.log(error)
+                res.send(error)
+            })
+            
     },
+    /*
     delete: function (req,res) {
         let movieId = req.params.id;
         Movies
