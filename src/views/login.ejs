@@ -4,17 +4,16 @@
 <body>
     <%- include ('./partials/header.ejs') %>
     <main>
-        <br><br><br><br><br><br>
-        <form action="/" method="POST">
+        <form action="/" method="POST" class="loginFormulario" id="loginFormaulario">
             <div class="formCreate1">
                 <div>
                     <label class="label" ><b>Correo</b></label><br>
-                    <input class="input" type="text" name="UsuarioEmail" required>
+                    <input class="input email" type="text" name="UsuarioEmail"><p id="errorEmail"></p><br>
                 </div>
                 <br>
                 <div>
                     <label class="label" ><b>Contraseña</b></label><br>
-                    <input class="input" type="password" name="password" required>
+                    <input class="input contrasena" type="password" name="password"><p id="errorContrasena"></p><br>
                 </div>
                 <br>
                 <div>
@@ -27,5 +26,6 @@
         </form>
     </main>
     <%- include ('./partials/footer.ejs') %>  
+    <script src="../../javascripts/loginAddValidation.js"></script>
 </body>
 </html>
