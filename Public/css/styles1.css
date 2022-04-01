@@ -242,6 +242,12 @@ form{
   font-family: 'Solway', 'Arial', sans-serif;
 }
 
+#errorNombre, #errorEmail, #errorTelefono, #errorConsulta {
+  color: red;
+  font-family: 'Solway', 'Arial', sans-serif;
+  font-size: 10px;
+}
+
 /* responsive*/
 /* @media screen and (min-width: 601px) {
 

@@ -3,25 +3,25 @@
     <%- include('./partials/head.ejs') %>
     <%- include ('./partials/header.ejs') %>
     <main>
-        <br><br><br><br><br><br>
         <form action="/" method="POST" class="contactoFormulario" id="contactoFormaulario">
             <div class="formCreate1">
                 <label class="label" ><b>Nombre</b></label><br>
                 <input class="input name" type="text" name="UsuarioNombre"><p id="errorNombre"></p>
                 <br>
                 <label class="label" ><b>Correo</b></label><br>
-                <input class="input" type="text" name="UsuarioEmail"><br>
+                <input class="input email" type="text" name="UsuarioEmail"><p id="errorEmail"></p><br>
 
                 <label class="label" ><b>Teléfono</b></label><br>
-                <input class="input" type="text" name="UsuarioConfirma"><br>
+                <input class="input telefono" type="text" name="UsuarioConfirma"><p id="errorTelefono"></p><br>
 
                 <label class="label" ><b>Consulta</b></label><br>
-                <textarea class="input" name="consulta" cols="30" rows="4"></textarea><br>
+                <textarea class="input consulta" name="consulta" cols="30" rows="4"></textarea><p id="errorConsulta"></p><br>
 
                 <button class="login" type="submit">Enviar</button><br><br>
                 <br>
             </div>
         </form>
+        <br>
     </main>
     <%- include ('./partials/footer.ejs') %>
     <script src="../../javascripts/contactoAddValidation.js"></script>
