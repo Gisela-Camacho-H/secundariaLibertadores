@@ -24,21 +24,6 @@
         </form>
     </main>
     <%- include ('./partials/footer.ejs') %>
-    <script>
-        window.addEventListener("load", function() {
-            let formulario = document.querySelector("form.contactoFormulario");
-
-            formulario.addEventListener("submit", function(e) {
-                e.preventDefault();
-
-                let campoNombre = document.querySelector("input.name");
-
-                if(campoNombre.value == ""){
-                    document.getElementById("errorNombre").innerHTML = "El campo de nombre tiene que estar completo";
-                }
-            });
-        })
-    </script> 
-    <script src="../../Public/javascripts/contactoAddValidation.js"></script>
+    <script src="../../javascripts/contactoAddValidation.js"></script>
 </body>
 </html>
