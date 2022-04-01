@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('./partials/head.ejs') %>
-<body>
     <%- include ('./partials/header.ejs') %>
     <main>
         <br><br><br><br><br><br>
-        <form action="/" method="POST">
+        <form action="/" method="POST" class="contactoFormulario" id="contactoFormaulario">
             <div class="formCreate1">
                 <label class="label" ><b>Nombre</b></label><br>
-                <input class="input" type="text" name="UsuarioNombre" required><br>
-
+                <input class="input name" type="text" name="UsuarioNombre"><p id="errorNombre"></p>
+                <br>
                 <label class="label" ><b>Correo</b></label><br>
-                <input class="input" type="text" name="UsuarioEmail" required><br>
+                <input class="input" type="text" name="UsuarioEmail"><br>
 
                 <label class="label" ><b>Teléfono</b></label><br>
-                <input class="input" type="text" name="UsuarioConfirma" required><br>
+                <input class="input" type="text" name="UsuarioConfirma"><br>
 
                 <label class="label" ><b>Consulta</b></label><br>
-                <textarea class="input" name="consulta" cols="30" rows="4" required></textarea><br>
+                <textarea class="input" name="consulta" cols="30" rows="4"></textarea><br>
 
                 <button class="login" type="submit">Enviar</button><br><br>
                 <br>
@@ -25,5 +24,21 @@
         </form>
     </main>
     <%- include ('./partials/footer.ejs') %>
+    <script>
+        window.addEventListener("load", function() {
+            let formulario = document.querySelector("form.contactoFormulario");
+
+            formulario.addEventListener("submit", function(e) {
+                e.preventDefault();
+
+                let campoNombre = document.querySelector("input.name");
+
+                if(campoNombre.value == ""){
+                    document.getElementById("errorNombre").innerHTML = "El campo de nombre tiene que estar completo";
+                }
+            });
+        })
+    </script> 
+    <script src="../../Public/javascripts/contactoAddValidation.js"></script>
 </body>
 </html>
