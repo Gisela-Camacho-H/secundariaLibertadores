@@ -1,7 +1,20 @@
 const express = require('express');
 const path = require('path');
+const session = require('express-session');
+
+const adminLoggedMiddleware = require('./src/middlewares/adminLoggedMiddleware')
 
 const app = express();
+
+
+// Sessions 
+app.use(session({
+    secret: "secret",
+    resave: false,
+    saveUninitialized:false
+}));  
+
+app.use(adminLoggedMiddleware);
 
 //capturar la información de un formulario
 app.use(express.urlencoded({extended: false}));
@@ -20,10 +33,10 @@ const tutoresRouter = require('./src/routes/tutoresRouter');
 const anunciosRouter = require('./src/routes/anunciosRouter');
 
 app.use('/', mainRouter);
-app.use('/administrador', administradoresRouter);
+app.use('/administradores', administradoresRouter);
 app.use('/maestros', maestrosRouter);
 app.use('/tutores', tutoresRouter);
-app.use( anunciosRouter);
+app.use( '/anuncios',anunciosRouter);
 
 // Creacion de rutas API 
 const anunciosApiRouter = require('./src/routes/api/anunciosApiRouter');

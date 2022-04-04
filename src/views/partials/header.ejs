@@ -18,8 +18,12 @@
             <li><a href="/productos">Productos</a></li>
           </ul>
           <ul>
-              <li><a href="/login">Login</a></li>
-              <li><a href="/register">Registro</a></li>
+              <% if (locals.isLogged) {%>            
+                <li><a href="/administradores/cerrarSesion">Cerrar Sesión</a></li>
+              <% } else {%>
+                <li><a href="/administradores/login">Login</a></li>  
+                <li><a href="/register">Registro</a></li>
+                <% } %>  
             </ul>
         </div>
       </nav>
