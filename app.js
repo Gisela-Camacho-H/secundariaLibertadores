@@ -3,6 +3,9 @@ const path = require('path');
 
 const app = express();
 
+//capturar la información de un formulario
+app.use(express.urlencoded({extended: false}));
+
 const port = process.env.PORT || 3000;
 
 // Reconocimeinto de ruta a carpeta public(css, img, js, etc. )

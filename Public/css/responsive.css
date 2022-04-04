@@ -1,0 +1,23 @@
+
+@media screen and (min-width: 361px) {
+
+    .navbar li{
+        display: none;
+    }
+  }
+ 
+  @media (min-width: 769px){
+
+    .navbar ul{
+        display: flex;
+    }
+    
+    .navbar li{
+        display: flex;
+    }
+
+    
+
+}
+
+  

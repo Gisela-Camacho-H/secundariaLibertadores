@@ -2,8 +2,7 @@ const db = require('../database/models');
 const path = require('path');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
-const { render } = require('express/lib/response');
-const console = require('console');
+const {validationResult} = require("express-validator");
 
 const Anuncios = db.Anuncio;
 const Administradores = db.Administrador;
@@ -17,25 +16,35 @@ const anunciosController = {
     },
     
     crearPost: (req, res) => {
-   
+        const resultValidation = validationResult(req);
         const { titulo, descripcion } =  req.body;
-        const archivo = req.file.filename;
         const Administradores_id = 1;
         
-        Anuncios.create({
-            titulo, 
-            descripcion,
-            archivo,
-            Administradores_id
-        })
-            .then(()=> {
-                console.log(descripcion);
-                return res.redirect('/');
+        if (resultValidation.errors.length > 0) {
+            return res.render('administradores/crearAnuncio',{
+                errors: resultValidation.mapped(),
+                oldData:req.body,
+            });
+        }
+        else{
+            const archivo = req.file.filename;
+            
+            Anuncios.create({
+                titulo, 
+                descripcion,
+                archivo,
+                Administradores_id
             })
-            .catch((error) => {
-                console.log(error);
-                res.render("error", {error: "Error al crear anuncio"});
-            })
+                .then(()=> {
+                    console.log(descripcion);
+                    return res.redirect('/');
+                })
+                .catch((error) => {
+                    console.log(error);
+                    res.render("error", {error: "Error al crear anuncio"});
+                })
+        }
+        
     },
     listado: (req, res) => {
         Anuncios.findAll().
@@ -92,7 +101,7 @@ const anunciosController = {
                         
         if (req.file) {
             console.log('\x1b[31m%s\x1b[0m', '///////////error/////////////');
-            onsole.log('\x1b[33m%s\x1b[0m', '///////////');
+            console.log('\x1b[33m%s\x1b[0m', '///////////');
             const archivo = req.file.filename;
             variablesDB.archivo = archivo;
             
@@ -129,36 +138,7 @@ const anunciosController = {
             .catch(error => res.send(error)) 
     },
     //*/
-    nosotros: (req,res) =>{
-        res.render('nosotros')
-    },
-    admision: (req,res) =>{
-        res.render('admision')
-    }, 
-    plan: (req,res) =>{
-        res.render('plan')
-    }, 
-    calendario: (req,res) =>{
-        res.render('calendario')
-    }, 
-    galeria: (req,res) =>{
-        res.render('galeria')
-    }, 
-    contacto: (req,res) =>{
-        res.render('contacto')
-    }, 
-    otros: (req,res) =>{
-        res.render('otros')
-    }, 
-    productos: (req,res) =>{
-        res.render('productos')
-    },
-    register: (req, res) => {
-        res.render('register')
-    },
-    login: (req, res) => {
-        res.render('login')
-    },
+    
 }
 
 module.exports = anunciosController;

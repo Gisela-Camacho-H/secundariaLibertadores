@@ -1,11 +1,13 @@
 /*Importing google fonts*/
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
-
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
 /* slider anuncios*/
 @import "sliderAnuncios.css";
 @import "formAnuncios.css";
+/* css responsive*/
+@import "responsive.css";
+/* errors*/
+@import "errors.css";
 
 *, *::after, *::before {
   margin: 0;
@@ -43,6 +45,7 @@ body {
   transition: all .3s ease-in-out;
   /*height: 10%;*/
   z-index: 1;
+  display:flex;
 }
 .navbar.active {
   background-color: #29638A;
@@ -164,9 +167,9 @@ body {
 .container .content p {
   color: #555;
   line-height: 30px;
-  letter-spacing: 1.5px;
+  /*letter-spacing: 1.5px;*/
   text-align:justify;
-  margin: auto;
+  margin: 1rem 1rem;
 }
 
 .container .content img{
@@ -246,43 +249,4 @@ form{
   font-size: 10px;
 }
 
-/* responsive*/
-/* @media screen and (min-width: 601px) {
 
-  .content h1,
-  .content h2, .content h3, .content h4, .content p{
-    margin: auto;
-    font-size: 100%;
-    padding-right: 4rem;
-    padding-left: 4rem;
-  }
-  .content .header_background .slogan h1{
-    font-weight: 800;
-    font-size: 20px;
-    padding: 10px;
-  }
-  
-  .content .header_background .slogan p1{
-    font-weight: 500;
-    font-size: 10px;
-    padding: 10px;
-  }
-}
-@media screen and (max-width: 600px) {
-  .content h1,
-  .content h2, .content h3, .content h4, .content p{
-    margin: auto;
-    font-size: 100%;
-    padding-right: 4rem;
-    padding-left: 4rem;
-  }
-  .content .header_background .slogan h1 {
-    font-weight: 500;
-    font-size: 15px;
-  }  
-  .content .header_background .slogan p{
-    font-weight: 500;
-    font-size: 10px;
-  }
-
-} */

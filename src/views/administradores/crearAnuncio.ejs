@@ -9,11 +9,20 @@
                 <form action="/anuncios/crear" method="POST" enctype="multipart/form-data">
                     <div class="formCreate1">
                         <label class= "label" for=""> Titulo: </label>
-                        <input class="input" type="text" name ="titulo">
+                        <input class="input" type="text" name ="titulo" value="<%= locals.oldData ? oldData.titulo :null %>">
+                        <% if (locals.errors && errors.titulo) { %>
+                            <div class="text-error "><%= errors.titulo.msg %></div>
+                        <% } %>
                         <label class= "label" for=""> Descripcion: </label>
-                        <textarea class="input-text" maxlength="450" name ="descripcion">Ingresa Texto...</textarea>
+                        <textarea class="input-text" maxlength="450" name ="descripcion"><%= locals.oldData ? oldData.descripcion :null %></textarea>
+                        <% if (locals.errors && errors.descripcion) { %>
+                            <div class="text-error "><%= errors.descripcion.msg %></div>
+                        <% } %>
                         <label class= "label" for=""> Archivo: </label>
                         <input class="input" id="archivo"  type="file" name ="archivoAnuncio">
+                        <% if (locals.errors && errors.archivoAnuncio) { %>
+                            <div class="text-error "><%= errors.archivoAnuncio.msg %></div>
+                        <% } %>
                         <button class="login" type = "submit"> Crear </button>
                     </div> 
                 </form>

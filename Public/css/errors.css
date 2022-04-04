@@ -1,0 +1,6 @@
+.text-error {
+    font: italic;
+    color: #D8000C;
+    background-color: #FFD2D2;
+    width: 90%;
+}
