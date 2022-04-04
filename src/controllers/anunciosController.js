@@ -55,8 +55,8 @@ const anunciosController = {
                 return res.render('anuncios/detalleAnuncio', {anuncio});
             })
             .catch(err => {
-                console.log('%c///////////error/////////////', 'color: red');
-                console.log('\x1b[31m%s\x1b[0m', '///////////error/////////////')
+                console.log('\x1b[31m%s\x1b[0m', '///////////error/////////////');
+                onsole.log('\x1b[33m%s\x1b[0m', '///////////');
                 console.log(err)
             });
     },
@@ -71,17 +71,15 @@ const anunciosController = {
             .then(([anuncio, admin]) => {
                 return res.render('anuncios/editarAnuncio', {anuncio, admin})})
             .catch(error => {
-                console.log('\x1b[31m%s\x1b[0m', '///////////error/////////////')
-                console.log('\x1b[33m%s\x1b[0m', '///////////')
-                //console.log('%c///////////error/////////////', 'color: red');
+                console.log('\x1b[31m%s\x1b[0m', '///////////error/////////////');
+                console.log('\x1b[33m%s\x1b[0m', '///////////');
                 console.log(error)
                 res.send(error)
             })
     },
-    
     actualizar:  async(req,res) => {
         let anuncioId = req.params.id;  
-        let promesAnuncio = await Anuncios.findByPk(anuncioId,{include: ['anuncio_adminId']}, {raw:true});
+        let promesAnuncio = await Anuncios.findByPk(anuncioId,{include: ['anuncio_adminId']});
 
         const { titulo, descripcion } =  req.body;
         const Administradores_id = 1;
@@ -91,49 +89,46 @@ const anunciosController = {
             descripcion,
             Administradores_id,
         };
-        
-                
+                        
         if (req.file) {
-            console.log('\x1b[31m%s\x1b[0m', '/////error//////');
+            console.log('\x1b[31m%s\x1b[0m', '///////////error/////////////');
+            onsole.log('\x1b[33m%s\x1b[0m', '///////////');
             const archivo = req.file.filename;
             variablesDB.archivo = archivo;
-            //console.log(archivo)
-        }
-        console.log(variablesDB);
-        
+            
+        }        
         Anuncios.update(
             variablesDB,
             {
                 where: {id: anuncioId}
             })
-        .then(()=> {
-            return res.redirect('/')})            
-            .catch(error => {
-                console.log('\x1b[31m%s\x1b[0m', '///////////error/////////////')
-                console.log('\x1b[33m%s\x1b[0m', '///////////')
-                //console.log('%c///////////error/////////////', 'color: red');
-                console.log(error)
-                res.send(error)
-            })
+            .then(()=> {
+                return res.redirect('/')})            
+                .catch(error => {
+                    console.log('\x1b[31m%s\x1b[0m', '///////////error/////////////');
+                    console.log('\x1b[33m%s\x1b[0m', '///////////');
+                    console.log(error)
+                    res.send(error)
+                })
             
     },
-    /*
-    delete: function (req,res) {
-        let movieId = req.params.id;
-        Movies
-        .findByPk(movieId)
-        .then(Movie => {
-            return res.render(path.resolve(__dirname, '..', 'views',  'moviesDelete'), {Movie})})
-        .catch(error => res.send(error))
+    borrar: function (req,res) {
+        let  anuncioId= req.params.id;  
+        Anuncios.findByPk(anuncioId)
+            .then(Anuncio => {
+                return res.render('anuncios/borrarAnuncio', {Anuncio})
+            })
+            .catch(error => res.send(error))
     },
-    destroy: function (req,res) {
-        let movieId = req.params.id;
-        Movies
-        .destroy({where: {id: movieId}, force: true}) // force: true es para asegurar que se ejecute la acción
-        .then(()=>{
-            return res.redirect('/movies')})
-        .catch(error => res.send(error)) 
-    }*/
+    //*
+    destruir: function (req,res) {
+        let  anuncioId= req.params.id; 
+        Anuncios.destroy({where: {id: anuncioId}, force: true}) 
+            .then(()=>{
+                return res.redirect('/')})
+            .catch(error => res.send(error)) 
+    }
+    //*/
 }
 
 module.exports = anunciosController;

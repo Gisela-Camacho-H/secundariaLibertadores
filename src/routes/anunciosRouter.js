@@ -12,6 +12,9 @@ anunciosRouter.post('/crear', subirAnuncio.single('archivoAnuncio'), anunciosCon
 anunciosRouter.get('/:id', anunciosController.detalle)
 anunciosRouter.get('/editar/:id', anunciosController.editar);
 anunciosRouter.post('/editar/:id',subirAnuncio.single('archivoAnuncio'),  anunciosController.actualizar);
+anunciosRouter.get('/borrar/:id', anunciosController.borrar);
+anunciosRouter.post('/borrar/:id', anunciosController.destruir);
+
 //anunciosRouter.get('/listado', anunciosController.listado);
 
 
