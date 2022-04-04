@@ -20,7 +20,7 @@ app.use('/', mainRouter);
 app.use('/administrador', administradoresRouter);
 app.use('/maestros', maestrosRouter);
 app.use('/tutores', tutoresRouter);
-app.use('/anuncios', anunciosRouter);
+app.use( anunciosRouter);
 
 // Creacion de rutas API 
 const anunciosApiRouter = require('./src/routes/api/anunciosApiRouter');
