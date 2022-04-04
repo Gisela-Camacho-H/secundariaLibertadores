@@ -4,7 +4,7 @@
   "description": "Dar publicidad a la secundaria Libertadores de América a través de una página web donde puedan compartir información de oferta educativa y de contacto.",
   "main": "app.js",
   "scripts": {
-    "test": "nodemon app.js"
+    "start": "npx nodemon app.js"
   },
   "repository": {
     "type": "git",

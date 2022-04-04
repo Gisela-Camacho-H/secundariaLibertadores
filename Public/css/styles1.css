@@ -182,8 +182,17 @@ body {
 Footer 
 */
 footer{
+  border: 1px solid;
+  border-color: rgb(14, 58, 36);
   margin-top: 4em;
-  background-color: #0E333C;
+  background-color: #0d4856;
+}
+.footerInfo{
+  min-width: 45%;
+  max-width: 31%;
+  padding: 1rem;
+  margin: 1rem;
+
 }
 footer p{
   color: #fff; 
@@ -195,8 +204,21 @@ footer p{
   display: flex;
   justify-content: space-between;
 }
+#logo_footer{
+background-image: url(../img/logo.png);
+background-position: center center;
+    background-attachment:inherit;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: aliceblue;
+    width: 150px;
+    height: 150px;
+}
 #map{
   margin-bottom: 20px;
+  padding-left: 25px;
+  min-width: 500px;
+  min-height: 350px;
 }
 
 /*
@@ -240,6 +262,29 @@ form{
   margin-left: 120px;
   width: 100%;
   font-family: 'Solway', 'Arial', sans-serif;
+}
+
+.calendario{
+background-image: url(../img/anuncios/1647659106781_img_.jpg);
+background-position: center center;
+background-attachment:inherit;
+background-repeat: no-repeat;
+background-size: cover;
+color: aliceblue;
+width: 800px;
+height: 608px;
+}
+
+.admision{
+background-image: url(../img/anuncios/1647639316699_img_.jpg);
+background-position: center center;
+background-attachment:inherit;
+background-repeat: no-repeat;
+background-size: cover;
+color: aliceblue;
+width: 800px;
+height: 608px;
+
 }
 
 /* responsive*/
