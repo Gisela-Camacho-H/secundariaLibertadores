@@ -31,7 +31,7 @@ const adminController = {
                 if (passwordOk){
                     delete userToLogin.password;
                     req.session.userLogged = userToLogin;
-                    return res.redirect('/',{user: req.session.userLogged});
+                    return res.redirect('/');
                 }
                 return res.render('administradores/login',{
                     errors: {

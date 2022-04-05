@@ -6,8 +6,8 @@ const adminMiddleware = require('../middlewares/adminMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 
-administradoresRouters.get('/login',guestMiddleware,  administradoresController.login);
-administradoresRouters.post('/login', authMiddleware,adminMiddleware, administradoresController.loginAcceso)
+administradoresRouters.get('/login', administradoresController.login);
+administradoresRouters.post('/login', adminMiddleware, administradoresController.loginAcceso)
 administradoresRouters.get('/cerrarSesion', administradoresController.cerrarSesion)
 //administradoresRouters.get('/registrar', guestMiddleware ,administradoresController.registrar);
 
