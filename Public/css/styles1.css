@@ -178,6 +178,17 @@ body {
   width: 40%;
 }
 
+.container .content a {
+  text-decoration: none;
+  background-color: #FFDF59;
+  text-align: center;
+}
+
+.container .content a:hover {
+  background-color: #0E333C;
+  color: #fff;
+  text-decoration: none;
+}
 
 
 /*
@@ -265,8 +276,6 @@ form{
   font-family: 'Solway', 'Arial', sans-serif;
 }
 
-<<<<<<< HEAD
-=======
 .calendario{
 background-image: url(../img/anuncios/1647659106781_img_.jpg);
 background-position: center center;
@@ -290,19 +299,20 @@ height: 608px;
 
 }
 
+.text-bottom p{
+  margin: auto;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+}
+
 /* responsive*/
 /* @media screen and (min-width: 601px) {
->>>>>>> jon_vistas
 #errorNombre, #errorEmail, #errorTelefono, #errorConsulta, #errorContrasena, #errorApellidos, #errorConfirmar {
   color: red;
   font-family: 'Solway', 'Arial', sans-serif;
   font-size: 10px;
 }
-<<<<<<< HEAD
-
-
-=======
 
 
 
->>>>>>> jon_vistas

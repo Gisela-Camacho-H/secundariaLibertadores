@@ -11,10 +11,17 @@
           son portadores de un nivel alto en su aprendizaje, conocimientos y habilidades, con lo que, queda
           demostrado el cumplimiento y la preparación profesional de los docentes..
         </p>
-        <h4>Más<h4>
+        <h4><a href="/nosotros">Más</a><h4>
       </div>
     </section>
     <%- include ('./partials/slider_anuncios.ejs') %>
+    <% if (locals.isLogged) {%>     
+      <div class="button">
+          <a href="/anuncios/crear/">
+              <button type="button" name="button" class="login">Agregar</button>
+          </a>
+      </div>
+  <% }%>  
   </main>
   <br>
   <br>
