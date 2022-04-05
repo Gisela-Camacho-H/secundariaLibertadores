@@ -23,11 +23,14 @@ module.exports = function(sequelize, dataTypes){
         password: {
             type: dataTypes.STRING(45),
         }, 
+       
     };
 
     let config = {
         tableName: "Administradores",
         timestamp: false,
+        createdAt: false,
+        updatedAt: false,
     }
 
     const  Administrador = sequelize.define(alias, cols, config);
@@ -36,6 +39,7 @@ module.exports = function(sequelize, dataTypes){
         Administrador.hasMany(models.Anuncio, {
             as: "anuncio_adminId",
             foreignKey: "Administradores_id",
+            timestamp: false,
           });
     }
 

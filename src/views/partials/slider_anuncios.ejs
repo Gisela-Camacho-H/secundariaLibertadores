@@ -1,13 +1,13 @@
 <section class="container">
     <div class="content">
-        <h1>Anuncios recientes</h1>
+        <h2>Anuncios recientes</h2>
         <div class="slider-anuncios">
             <div class="slider-container">
                 <div class="boxes">
                     <% for(const anuncio of anuncios) { %>
                     <article class="">
                         <div class="box">
-                            <h1><%= anuncio.titulo %></h1>
+                            <h2><%= anuncio.titulo %></h2>
                             <a href="/anuncios/<%= anuncio.id %>"">
                                 <img src="/img/anuncios/<%= anuncio.archivo %>"" alt="anuncio">
                             </a>

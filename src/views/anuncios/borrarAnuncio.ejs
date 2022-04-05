@@ -1,0 +1,21 @@
+<%- include('../partials/head.ejs') %>
+<body>
+    <%- include ('../partials/header.ejs') %>
+    <main>
+        <section class="container">
+            <div class="content">
+                <h1>Estas seguro de querer borrar esta película: <%= Anuncio.titulo %>???</h1>
+                <p>
+                    <form action="/anuncios/borrar/<%= Anuncio.id %>" method="POST">
+                        <br>
+                        <p> <button class="login" type="submit">Borrar Anuncio</button>
+                        <br>
+                        <a  class="botonVolver" href="/">Inicio</a></p>
+                    </form>
+                </p>
+            </div>        
+    </section>
+</main>
+<br>
+<br>
+<%- include ('../partials/footer.ejs') %>

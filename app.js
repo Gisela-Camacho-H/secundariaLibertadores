@@ -3,6 +3,9 @@ const path = require('path');
 
 const app = express();
 
+//capturar la información de un formulario
+app.use(express.urlencoded({extended: false}));
+
 const port = process.env.PORT || 3000;
 
 // Reconocimeinto de ruta a carpeta public(css, img, js, etc. )
@@ -20,7 +23,7 @@ app.use('/', mainRouter);
 app.use('/administrador', administradoresRouter);
 app.use('/maestros', maestrosRouter);
 app.use('/tutores', tutoresRouter);
-app.use('/anuncios', anunciosRouter);
+app.use( anunciosRouter);
 
 // Creacion de rutas API 
 const anunciosApiRouter = require('./src/routes/api/anunciosApiRouter');

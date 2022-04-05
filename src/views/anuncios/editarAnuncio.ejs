@@ -1,0 +1,26 @@
+<%- include('../partials/head.ejs') %>
+<body>
+    <%- include ('../partials/header.ejs') %>
+    <main>
+        <section class="container">
+            <div class="content">
+                <h2> Edición anuncio </h2>
+                <form action="/anuncios/editar/<%= anuncio.id %>" method="POST" enctype="multipart/form-data">
+                    <div class="formCreate1">
+                        <label class= "label" for=""> Titulo: </label>
+                        <input class="input" type="text" name ="titulo" value="<%=anuncio.titulo%>">
+                        <label class= "label" for=""> Descripcion: </label>
+                        <textarea class="input-text" maxlength="450" name ="descripcion" value="<%=anuncio.descripcion%>"><%=anuncio.descripcion%></textarea>
+                        <label class= "label" for=""> Archivo: </label>
+                        <img src="/img/anuncios/<%= anuncio.archivo %>"" alt="anuncio">
+                        <label class= "label" for=""> Editar Archivo: </label>
+                        <input class="input" id="archivo"  type="file" name ="archivoAnuncio" >
+                        <button class="login" type = "submit"> Actualizar </button>
+                    </div> 
+            </form>
+        </div>        
+    </section>
+</main>
+<br>
+<br>
+<%- include ('../partials/footer.ejs') %>
