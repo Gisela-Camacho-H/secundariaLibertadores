@@ -14,7 +14,9 @@ module.exports = function(sequelize, dataTypes){
 
     let config = {
         tableName: "Cursos",
-        timestamps: false,
+        timestamp: false,
+        createdAt: false,
+        updatedAt: false,
     }
 
     const  Curso = sequelize.define(alias, cols, config);

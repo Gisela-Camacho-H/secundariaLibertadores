@@ -1,0 +1,22 @@
+<%- include ('../partials/head.ejs') %>
+<%- include ('../partials/header.ejs') %>
+    <main>
+        <section class="container">
+            <div class="content">
+                <h2> Maestros</h2>
+                <ul>
+                    <% for (let i = 0; i < maestros.length; i++) {%>
+                        <li>
+                            <%= maestros[i].nombre %>
+                            <%= maestros[i].apellidoPaterno %>
+                            <%= maestros[i].apellidoMaterno %>
+                        </li>
+                    <%}%>    
+                </ul>
+            </div>        
+        </section>
+    </br>
+    </br>
+    </main> 
+
+<%- include ('../partials/footer.ejs') %>

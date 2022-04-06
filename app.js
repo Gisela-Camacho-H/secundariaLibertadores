@@ -40,8 +40,13 @@ app.use( '/anuncios',anunciosRouter);
 
 // Creacion de rutas API 
 const anunciosApiRouter = require('./src/routes/api/anunciosApiRouter');
+const maestrosApiRouter = require('./src/routes/api/maestrosApiRouter');
+const estudiantesApiRouter = require('./src/routes/api/estudiantesApiRouter');
+
 
 app.use('/api/anuncios', anunciosApiRouter);
+app.use('/api/maestros', maestrosApiRouter);
+app.use('/api/estudiantes', estudiantesApiRouter);
 
 // Motor de vistas
 app.set('view engine','ejs');

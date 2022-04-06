@@ -6,8 +6,9 @@ const {validationResult} = require("express-validator");
 
 const Anuncios = db.Anuncio;
 const Administradores = db.Administrador;
+
 const anunciosController = {
- 
+    
     crear: (req, res) => {
         Anuncios.findAll()
             .then(function(anuncios) {

@@ -5,7 +5,6 @@ const subirAnuncio = require('../middlewares/subirAnuncio');
 const crearAnuncioMiddleware = require('../middlewares/crearAnuncioMiddleware');
 //controladores
 const anunciosController =  require('../controllers/anunciosController');
-const mainRouters = require('../routes/mainRouter');
 const anunciosRouter = express.Router();
 
 anunciosRouter.get('/crear', anunciosController.crear);

@@ -28,7 +28,7 @@ module.exports = function(sequelize, dataTypes){
             unique: true,
         }, 
         password: {
-            type: dataTypes.STRING(45),
+            type: dataTypes.STRING(100),
         }, 
         telefono: {
             type: dataTypes.INTEGER,
@@ -41,6 +41,8 @@ module.exports = function(sequelize, dataTypes){
     let config = {
         tableName: "Maestros",
         timestamp: false,
+        createdAt: false,
+        updatedAt: false,
     }
 
     const  Maestro = sequelize.define(alias, cols, config);

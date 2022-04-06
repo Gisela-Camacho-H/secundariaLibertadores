@@ -37,6 +37,8 @@ module.exports = function(sequelize, dataTypes){
     let config = {
         tableName: "Tutores",
         timestamp: false,
+        createdAt: false,
+        updatedAt: false,
     }
 
     const  Tutor = sequelize.define(alias, cols, config);

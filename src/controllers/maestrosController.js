@@ -1,36 +1,22 @@
+const db = require('../database/models');
 const path = require('path');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+const {validationResult} = require("express-validator");
 
-const administradoresController = {
-    index: (req, res) => {
-        res.render('index')
+const Maestros = db.Maestro;
+const Administradores = db.Administrador;
+
+
+const maestrosController = {
+    listado: (req, res) => {
+        Maestros.findAll().
+            then((maestros)=> {
+                
+                res.render('maestros/listadoMaestros', {maestros})
+            })     
     },
-    nosotros: (req,res) =>{
-        res.render(path.join(__dirname, '../views/nosotros'))
-    },
-    admision: (req,res) =>{
-        res.render(path.join(__dirname, '../views/admision'))
-    }, 
-    plan: (req,res) =>{
-        res.render(path.join(__dirname, '../views/plan'))
-    }, 
-    calendario: (req,res) =>{
-        res.render(path.join(__dirname, '../views/calendario'))
-    }, 
-    galeria: (req,res) =>{
-        res.render(path.join(__dirname, '../views/galeria'))
-    }, 
-    contacto: (req,res) =>{
-        res.render(path.join(__dirname, '../views/contacto'))
-    }, 
-    otros: (req,res) =>{
-        res.render(path.join(__dirname, '../views/otros'))
-    }, 
-    productos: (req,res) =>{
-        res.render(path.join(__dirname, '../views/productos'))
-    },
-    register: (req, res) => {
-        res.render('register')
-    },
+    
 };
 
-module.exports = administradoresController;
+module.exports = maestrosController;

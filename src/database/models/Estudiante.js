@@ -28,6 +28,8 @@ module.exports = function(sequelize, dataTypes){
     let config = {
         tableName: "Estudiantes",
         timestamp: false,
+        createdAt: false,
+        updatedAt: false,
     }
 
     const  Estudiante = sequelize.define(alias, cols, config);
