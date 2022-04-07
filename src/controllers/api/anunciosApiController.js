@@ -21,7 +21,7 @@ const anunciosApiController = {
                     },
                     data: anuncios
                 }   
-                console.log(respuesta);
+                console.log("Se muestra API de Anuncios");
                 res.json(respuesta);
                 })  
     }
